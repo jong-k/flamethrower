@@ -1,5 +1,11 @@
+import UsersList from "./components/UsersList";
+
 function App() {
-  return <h2>hi!!</h2>;
+  return (
+    <>
+      <UsersList />
+    </>
+  );
 }
 
 export default App;
