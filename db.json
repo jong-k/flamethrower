@@ -1,6 +1,29 @@
 {
   "users": [
-    { "id": 1, "name": "Kane" }
+    {
+      "id": 1,
+      "name": "Kane"
+    },
+    {
+      "name": "Peter",
+      "id": 2
+    },
+    {
+      "name": "Park",
+      "id": 3
+    },
+    {
+      "name": "Cristina Simonis",
+      "id": 4
+    },
+    {
+      "name": "Meghan Schulist",
+      "id": 5
+    },
+    {
+      "name": "Steven Christiansen",
+      "id": 6
+    }
   ],
   "albums": [],
   "photos": []

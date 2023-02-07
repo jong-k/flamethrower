@@ -10,7 +10,7 @@ const Skeleton = ({ times }: PropsType) => {
       <div
         key={i}
         className={styles.outer}
-        style={{ width: "100%", height: "10rem" }}
+        style={{ width: "100%", height: "2.5rem" }}
       >
         <div className={styles.inner} />
       </div>
