@@ -4,7 +4,7 @@ const USERS_URL = "http://localhost:3005/users";
 
 export const fetchUsers = createAsyncThunk("users/fetch", async () => {
   const response = await fetch(USERS_URL);
-  await pause(1000); // TODO - 끝나면 지우기!
+  await pause(5000); // TODO - 끝나면 지우기!
   return await response.json();
 });
 

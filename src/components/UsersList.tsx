@@ -9,6 +9,7 @@ const UsersList = () => {
     return state.users; // { data, [], isLoading: false, error: null }
   });
 
+  // TODO: fetchUsers.ts 에서 createAsyncThunk 타입 정해주기 -> 공홈 참고
   useEffect(() => {
     dispatch(fetchUsers());
   }, []);
