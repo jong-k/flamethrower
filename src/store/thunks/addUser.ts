@@ -1,6 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { faker } from "@faker-js/faker";
 
+export interface UserType {
+  name: string;
+  id: number;
+}
+
 const USERS_URL = "http://localhost:3005/users";
 
 export const addUser = createAsyncThunk("users/add", async () => {
@@ -13,5 +18,5 @@ export const addUser = createAsyncThunk("users/add", async () => {
       name: faker.name.fullName(),
     }),
   });
-  return await response.json();
+  return (await response.json()) as UserType;
 });

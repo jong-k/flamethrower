@@ -11,5 +11,6 @@ export const store = configureStore({
 // fetchUsers.ts 에서 export 해주는것 + 여기서 export 하는것 까지 export
 export * from "./thunks/fetchUsers";
 export * from "./thunks/addUser";
+export * from "./thunks/useThunk";
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

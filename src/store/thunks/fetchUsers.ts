@@ -1,11 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import { type UserType } from "./addUser";
 
 const USERS_URL = "http://localhost:3005/users";
 
 export const fetchUsers = createAsyncThunk("users/fetch", async () => {
   const response = await fetch(USERS_URL);
   await pause(1000); // TODO - 끝나면 지우기!
-  return await response.json();
+  return (await response.json()) as UserType[];
 });
 
 // fetching 의도적으로 늦추는 함수 -> test용
