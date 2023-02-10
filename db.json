@@ -1,72 +1,12 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Kane"
+      "name": "Bruce Kuhic",
+      "id": 1
     },
     {
-      "name": "Peter",
+      "name": "Edna Herzog",
       "id": 2
-    },
-    {
-      "name": "Park",
-      "id": 3
-    },
-    {
-      "name": "Cristina Simonis",
-      "id": 4
-    },
-    {
-      "name": "Meghan Schulist",
-      "id": 5
-    },
-    {
-      "name": "Steven Christiansen",
-      "id": 6
-    },
-    {
-      "name": "Mr. Leroy O'Conner",
-      "id": 7
-    },
-    {
-      "name": "Linda Streich",
-      "id": 8
-    },
-    {
-      "name": "Joanna Schulist",
-      "id": 9
-    },
-    {
-      "name": "Penny Wiza",
-      "id": 10
-    },
-    {
-      "name": "Mr. Regina Batz",
-      "id": 11
-    },
-    {
-      "name": "Emilio Ryan",
-      "id": 12
-    },
-    {
-      "name": "Rodney Stracke I",
-      "id": 13
-    },
-    {
-      "name": "Sarah Ruecker",
-      "id": 14
-    },
-    {
-      "name": "Patrick",
-      "id": 15
-    },
-    {
-      "name": "Caroline Bode",
-      "id": 16
-    },
-    {
-      "name": "Mrs. Levi Deckow",
-      "id": 17
     }
   ],
   "albums": [],

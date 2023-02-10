@@ -3,6 +3,8 @@ import { useAppSelector } from "../store/hooks";
 import { addUser, fetchUsers, useThunk } from "../store";
 import styles from "../styles/UsersList.module.scss";
 import Skeleton from "./Skeleton";
+import Button from "./Button";
+import UsersListItem from "./UsersListItem";
 
 const UsersList = () => {
   const [doFetchUsers, isLoadingUsers, loadingUsersError] =
@@ -21,31 +23,30 @@ const UsersList = () => {
     doCreateUser();
   };
 
-  if (isLoadingUsers) return <Skeleton times={6} />;
-  if (loadingUsersError != null) return <div>Error fetching data...</div>;
+  let content;
+  if (isLoadingUsers) {
+    content = <Skeleton times={6} />;
+  } else if (loadingUsersError) {
+    content = <div>Error fetching data...</div>;
+  } else {
+    content = data.map((user) => {
+      return <UsersListItem key={user.id} user={user} />;
+    });
+  }
 
-  const renderedUsers = data.map((user) => {
-    return (
-      <div key={user.id} className={styles.outer}>
-        <div className={styles.inner}>{user.name}</div>
-      </div>
-    );
-  });
   return (
     <>
       <div className={styles.header}>
         <h1>Users</h1>
-        {isCreatingUser ? (
-          <p>로딩 스피너</p>
-        ) : creatingUserError ? (
+        {creatingUserError ? (
           <p>Error creating user...</p>
         ) : (
-          <button className={styles.button} onClick={handleUserAdd}>
+          <Button loading={isCreatingUser} onClick={handleUserAdd}>
             + Add User
-          </button>
+          </Button>
         )}
       </div>
-      {renderedUsers}
+      {content}
     </>
   );
 };

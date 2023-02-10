@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { type UserType } from "./addUser";
+import { type UserType } from "../../components/UsersListItem";
 
 const USERS_URL = "http://localhost:3005/users";
 

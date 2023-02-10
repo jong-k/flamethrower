@@ -1,0 +1,25 @@
+.outer {
+  margin-bottom: 0.5rem;
+  border-radius: 1.5rem;
+}
+
+.middle {
+  display: flex;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  background: lightgray;
+  border-radius: 0.5rem;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.temp {
+  padding: 0.5rem;
+  border-top: 1px solid black;
+}

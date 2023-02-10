@@ -1,10 +1,9 @@
 import { useCallback, useState } from "react";
 import { useAppDispatch } from "../hooks";
-// import { type UserType } from "./addUser";
 
 export const useThunk = (thunk) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<null | Error>(null);
+  const [error, setError] = useState(null);
   const dispatch = useAppDispatch();
 
   const runThunk = useCallback((arg) => {

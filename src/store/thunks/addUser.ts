@@ -1,10 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { faker } from "@faker-js/faker";
-
-export interface UserType {
-  name: string;
-  id: number;
-}
+import { type UserType } from "../../components/UsersListItem";
 
 const USERS_URL = "http://localhost:3005/users";
 
