@@ -1,6 +1,7 @@
 .outer {
   margin-bottom: 0.5rem;
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid black;
 }
 
 .middle {
@@ -8,7 +9,6 @@
   margin: 0.5rem;
   padding: 0.5rem;
   align-items: center;
-  cursor: pointer;
   background: lightgray;
   border-radius: 0.5rem;
 }

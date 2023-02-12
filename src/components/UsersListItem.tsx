@@ -1,7 +1,8 @@
 import { GoTrashcan } from "react-icons/go";
-import styles from "../styles/UsersListItem.module.scss";
 import { removeUser, useThunk } from "../store";
 import Button from "./Button";
+import ExpandablePanel from "./ExpandablePanel";
+import AlbumsList from "./AlbumsList";
 
 export interface UserType {
   name: string;
@@ -19,18 +20,20 @@ const UsersListItem = ({ user }: PropsType) => {
     doRemoveUser(user);
   };
 
+  const header = (
+    <>
+      <Button loading={isLoading} onClick={handleClick}>
+        <GoTrashcan />
+      </Button>
+      {error && <div>Error deleteing user.</div>}
+      {user.name}
+    </>
+  );
+
   return (
-    <div key={user.id} className={styles.outer}>
-      <div className={styles.middle}>
-        <div className={styles.inner}>
-          <Button loading={isLoading} onClick={handleClick}>
-            <GoTrashcan />
-          </Button>
-          {error && <div>Error deleting user</div>}
-          {user.name}
-        </div>
-      </div>
-    </div>
+    <ExpandablePanel header={header}>
+      <AlbumsList user={user} />
+    </ExpandablePanel>
   );
 };
 
