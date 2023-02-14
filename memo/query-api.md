@@ -21,3 +21,8 @@
   - ex) ?userId=userId
 - request method?
   - ex) GET, POST ...
+### 6. 자동으로 생성된 hooks export 해주기
+### 7. API를 store에 연결하기
+- reducer, middleware, listener 생성
+### 8. store/index.ts 에서 hooks export 해주기
+### 9. 컴포넌트에서 생성된 hooks 사용하기
