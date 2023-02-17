@@ -15,16 +15,6 @@
   ],
   "albums": [
     {
-      "id": 10,
-      "title": "Hiking",
-      "userId": 1
-    },
-    {
-      "userId": 1,
-      "title": "Handmade Soft Gloves",
-      "id": 11
-    },
-    {
       "userId": 1,
       "title": "Intelligent Steel Keyboard",
       "id": 12
@@ -56,11 +46,6 @@
     },
     {
       "userId": 2,
-      "title": "Fantastic Frozen Tuna",
-      "id": 18
-    },
-    {
-      "userId": 2,
       "title": "Ergonomic Frozen Chair",
       "id": 19
     },
@@ -68,6 +53,21 @@
       "userId": 1,
       "title": "Modern Plastic Shoes",
       "id": 20
+    },
+    {
+      "userId": 2,
+      "title": "Tasty Steel Tuna",
+      "id": 21
+    },
+    {
+      "userId": 2,
+      "title": "Ergonomic Soft Pants",
+      "id": 22
+    },
+    {
+      "userId": 3,
+      "title": "Recycled Metal Keyboard",
+      "id": 23
     }
   ],
   "photos": []
