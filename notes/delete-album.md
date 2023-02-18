@@ -19,3 +19,14 @@
 - 기존에 AlbumsList.tsx 에서 map으로 만들어주던 것을 대신할 컴포넌트인 AlbumsListItem 생성
 - hooks 연결
 - tag 무효화
+  - album에 있는 userId를 이용!
+
+### 5. 별도
+- 그런데 만약 album에 userId가 없는 경우라면??
+- 방법1) useRemove~ mutation hook 의 removeAlbum 메서드에서 매개변수에 album과 user를 함께 전달!
+```ts
+const handleRemoveAlbum = () => {
+  // removeAlbum({ album, user }); 형태로
+}
+```
+- 이를 위해 endpoint에서 queryArg 에 { album, user } 같은 객체 형태로 전달해야 함
