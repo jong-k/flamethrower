@@ -25,34 +25,14 @@
       "id": 13
     },
     {
-      "userId": 1,
-      "title": "Rustic Steel Table",
-      "id": 14
-    },
-    {
       "userId": 3,
       "title": "Elegant Metal Pizza",
       "id": 15
     },
     {
-      "userId": 1,
-      "title": "Licensed Cotton Salad",
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "title": "Elegant Soft Fish",
-      "id": 17
-    },
-    {
       "userId": 2,
       "title": "Ergonomic Frozen Chair",
       "id": 19
-    },
-    {
-      "userId": 1,
-      "title": "Modern Plastic Shoes",
-      "id": 20
     },
     {
       "userId": 2,
@@ -61,12 +41,12 @@
     },
     {
       "userId": 2,
-      "title": "Ergonomic Soft Pants",
+      "title": "Electronic Metal Computer",
       "id": 22
     },
     {
-      "userId": 3,
-      "title": "Recycled Metal Keyboard",
+      "userId": 1,
+      "title": "Intelligent Frozen Cheese",
       "id": 23
     }
   ],
