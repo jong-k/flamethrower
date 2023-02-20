@@ -8,6 +8,7 @@ export const store = configureStore({
   reducer: {
     users: usersReducer,
     albums: albumsApi.reducer,
+    photos: photosApi.reducer,
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware()

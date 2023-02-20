@@ -5,7 +5,7 @@ import Skeleton from "./Skeleton";
 import PhotosListItem from "./PhotosListItem";
 
 const PhotosList = ({ album }) => {
-  const { data, error, isFetching } = useFetchPhotosQuery(album);
+  const { data, error, isLoading } = useFetchPhotosQuery(album);
   const [addPhoto, addPhotoResults] = useAddPhotoMutation();
 
   const handleAddPhoto = () => {
@@ -13,7 +13,7 @@ const PhotosList = ({ album }) => {
   };
 
   let content;
-  if (isFetching) {
+  if (isLoading) {
     content = <Skeleton times={4} />;
   } else if (error != null) {
     content = <div>Error fetching photos...</div>;
@@ -31,7 +31,7 @@ const PhotosList = ({ album }) => {
           + Add Photo
         </Button>
       </div>
-      <div>{content}</div>
+      <div className={styles.content}>{content}</div>
     </>
   );
 };

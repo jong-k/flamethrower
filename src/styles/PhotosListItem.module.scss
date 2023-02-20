@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  margin: 0.5rem;
+}
+
+.img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.delete {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+
+
+  &:hover {
+    background: #e5e7eb; // gray-200
+    opacity: 0.75;
+  }
+}
+
+.icon {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  cursor: pointer;
+}

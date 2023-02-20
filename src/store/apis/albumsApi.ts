@@ -14,7 +14,7 @@ export const albumsApi = createApi({
     baseUrl: "http://localhost:3005/",
     // TODO 의도적 pause이므로 테스트후 지우기
     fetchFn: async (...args) => {
-      await pause(2000);
+      await pause(1000);
       return await fetch(...args);
     },
   }),

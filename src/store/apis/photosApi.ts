@@ -1,14 +1,32 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { faker } from "@faker-js/faker";
 
+// fetching 의도적으로 늦추는 함수 -> test용
+const pause = async (duration: number) => {
+  return await new Promise((resolve) => {
+    setTimeout(resolve, duration);
+  });
+};
+
 export const photosApi = createApi({
   reducerPath: "photos",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3005/",
+    fetchFn: async (...args) => {
+      await pause(1000);
+      return await fetch(...args);
+    },
   }),
   endpoints(builder) {
     return {
       fetchPhotos: builder.query({
+        providesTags: (result, error, album) => {
+          const tags = result.map((photo) => {
+            return { type: "Photo", id: photo.id };
+          });
+          tags.push({ type: "PhotoAlbum", id: album.id });
+          return tags;
+        },
         query: (album) => {
           return {
             url: "/photos",
@@ -20,6 +38,9 @@ export const photosApi = createApi({
         },
       }),
       addPhoto: builder.mutation({
+        invalidatesTags: (result, error, album) => {
+          return [{ type: "PhotoAlbum", id: album.id }];
+        },
         query: (album) => {
           return {
             url: "/photos",
@@ -32,6 +53,9 @@ export const photosApi = createApi({
         },
       }),
       removePhoto: builder.mutation({
+        invalidatesTags: (result, error, photo) => {
+          return [{ type: "Photo", id: photo.id }];
+        },
         query: (photo) => {
           return {
             method: "DELETE",

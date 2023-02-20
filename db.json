@@ -53,7 +53,73 @@
       "userId": 1,
       "title": "Unbranded Metal Cheese",
       "id": 24
+    },
+    {
+      "userId": 1,
+      "title": "Generic Plastic Tuna",
+      "id": 25
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "albumId": 19,
+      "url": "https://loremflickr.com/150/150/abstract?lock=61723",
+      "id": 4
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=79908",
+      "id": 5
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=41844",
+      "id": 6
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=12302",
+      "id": 7
+    },
+    {
+      "albumId": 13,
+      "url": "https://loremflickr.com/150/150/abstract?lock=6374",
+      "id": 8
+    },
+    {
+      "albumId": 13,
+      "url": "https://loremflickr.com/150/150/abstract?lock=56828",
+      "id": 9
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=99454",
+      "id": 10
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=65921",
+      "id": 11
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=22341",
+      "id": 12
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=19351",
+      "id": 13
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=50323",
+      "id": 14
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=49122",
+      "id": 15
+    }
+  ]
 }
