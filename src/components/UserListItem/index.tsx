@@ -1,13 +1,9 @@
 import { GoTrashcan } from "react-icons/go";
-import { removeUser, useThunk } from "../store";
-import Button from "./Button";
-import ExpandablePanel from "./ExpandablePanel";
-import AlbumsList from "./AlbumsList";
-
-export interface UserType {
-  name: string;
-  id: number;
-}
+import { removeUser, useThunk } from "../../store";
+import Button from "../common/Button";
+import Panel from "../common/Panel";
+import AlbumsList from "../AlbumList";
+import { type UserType } from "../UserList";
 
 interface PropsType {
   user: UserType;
@@ -25,15 +21,15 @@ const UsersListItem = ({ user }: PropsType) => {
       <Button loading={isLoading} onClick={handleClick}>
         <GoTrashcan />
       </Button>
-      {error && <div>Error deleteing user.</div>}
+      {error && <div>user를 삭제하는데 실패했습니다</div>}
       {user.name}
     </>
   );
 
   return (
-    <ExpandablePanel header={header}>
+    <Panel header={header}>
       <AlbumsList user={user} />
-    </ExpandablePanel>
+    </Panel>
   );
 };
 

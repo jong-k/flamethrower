@@ -1,10 +1,15 @@
 import { useEffect } from "react";
-import { useAppSelector } from "../store/hooks";
-import { addUser, fetchUsers, useThunk } from "../store";
-import styles from "../styles/UsersList.module.scss";
-import Skeleton from "./Skeleton";
-import Button from "./Button";
-import UsersListItem from "./UsersListItem";
+import { useAppSelector } from "../../store/hooks";
+import { addUser, fetchUsers, useThunk } from "../../store";
+import styles from "./index.module.scss";
+import Skeleton from "../common/Skeleton";
+import Button from "../common/Button";
+import UsersListItem from "../UserListItem";
+
+export interface UserType {
+  name: string;
+  id: number;
+}
 
 const UsersList = () => {
   const [doFetchUsers, isLoadingUsers, loadingUsersError] =
@@ -35,9 +40,9 @@ const UsersList = () => {
   }
 
   return (
-    <>
+    <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Users</h1>
+        <h2>Gallery Drive</h2>
         {creatingUserError ? (
           <p>Error creating user...</p>
         ) : (
@@ -47,7 +52,7 @@ const UsersList = () => {
         )}
       </div>
       {content}
-    </>
+    </div>
   );
 };
 

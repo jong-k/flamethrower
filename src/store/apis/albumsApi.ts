@@ -1,18 +1,13 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { faker } from "@faker-js/faker";
-
-// fetching 의도적으로 늦추는 함수 -> test용
-const pause = async (duration: number) => {
-  return await new Promise((resolve) => {
-    setTimeout(resolve, duration);
-  });
-};
+import { pause } from "../../utils/pause";
+import { type AlbumType } from "../../components/AlbumList";
 
 export const albumsApi = createApi({
   reducerPath: "albums",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3005/",
-    // TODO 의도적 pause이므로 테스트후 지우기
+    // TODO : loading skeleton 확인을 위한 의도적 지연
     fetchFn: async (...args) => {
       await pause(1000);
       return await fetch(...args);
@@ -22,7 +17,7 @@ export const albumsApi = createApi({
     return {
       fetchAlbums: builder.query({
         providesTags: (result, error, user) => {
-          const tags = result.map((album) => {
+          const tags = result.map((album: AlbumType) => {
             return { type: "Album", id: album.id };
           });
           tags.push({ type: "UsersAlbums", id: user.id });
@@ -57,7 +52,7 @@ export const albumsApi = createApi({
         invalidatesTags: (result, error, album) => {
           return [{ type: "Album", id: album.id }];
         },
-        query: (album) => {
+        query: (album: AlbumType) => {
           return {
             url: `/albums/${album.id}`,
             method: "DELETE",

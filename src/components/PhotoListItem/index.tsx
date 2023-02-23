@@ -1,8 +1,13 @@
 import { GoTrashcan } from "react-icons/go";
-import styles from "../styles/PhotosListItem.module.scss";
-import { useRemovePhotoMutation } from "../store";
+import styles from "./index.module.scss";
+import { useRemovePhotoMutation } from "../../store";
+import { type PhotoType } from "../PhotoList";
 
-const PhotosListItem = ({ photo }) => {
+interface PropType {
+  photo: PhotoType;
+}
+
+const PhotoListItem = ({ photo }: PropType) => {
   const [removePhoto, results] = useRemovePhotoMutation();
   const handleRemovePhoto = () => {
     removePhoto(photo);
@@ -18,4 +23,4 @@ const PhotosListItem = ({ photo }) => {
   );
 };
 
-export default PhotosListItem;
+export default PhotoListItem;

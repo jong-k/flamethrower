@@ -9,14 +9,14 @@
 ### 2. store/index.ts 로 이동
 - store 에서 hooks import, export 해주기
 
-### 3. AlbumsList.tsx 로 이동
+### 3. index.tsx 로 이동
 - 컴포넌트에서 hooks import
 - 컴포넌트 상단에서 hooks에서 언패킹
   - 실제로 mutation 실행할 함수 (엔드포인트 이름과 같음)
   - 결과 state (results)
 
-### 4. AlbumsListItem.tsx 생성
-- 기존에 AlbumsList.tsx 에서 map으로 만들어주던 것을 대신할 컴포넌트인 AlbumsListItem 생성
+### 4. index.tsx 생성
+- 기존에 index.tsx 에서 map으로 만들어주던 것을 대신할 컴포넌트인 AlbumsListItem 생성
 - hooks 연결
 - tag 무효화
   - album에 있는 userId를 이용!

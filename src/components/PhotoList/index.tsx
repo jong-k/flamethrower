@@ -1,10 +1,21 @@
-import { useAddPhotoMutation, useFetchPhotosQuery } from "../store";
-import styles from "../styles/PhotosList.module.scss";
-import Button from "./Button";
-import Skeleton from "./Skeleton";
-import PhotosListItem from "./PhotosListItem";
+import { useAddPhotoMutation, useFetchPhotosQuery } from "../../store";
+import styles from "./index.module.scss";
+import Button from "../common/Button";
+import Skeleton from "../common/Skeleton";
+import PhotoListItem from "../PhotoListItem";
+import { type AlbumType } from "../AlbumList";
 
-const PhotosList = ({ album }) => {
+export interface PhotoType {
+  albumId: number;
+  url: string;
+  id: number;
+}
+
+interface PropType {
+  album: AlbumType;
+}
+
+const PhotosList = ({ album }: PropType) => {
   const { data, error, isLoading } = useFetchPhotosQuery(album);
   const [addPhoto, addPhotoResults] = useAddPhotoMutation();
 
@@ -18,8 +29,8 @@ const PhotosList = ({ album }) => {
   } else if (error != null) {
     content = <div>Error fetching photos...</div>;
   } else {
-    content = data.map((photo) => {
-      return <PhotosListItem key={photo.id} photo={photo} />;
+    content = data.map((photo: PhotoType) => {
+      return <PhotoListItem key={photo.id} photo={photo} />;
     });
   }
 

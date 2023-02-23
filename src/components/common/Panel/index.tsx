@@ -1,8 +1,13 @@
-import styles from "../styles/ExpandablePanel.module.scss";
+import styles from "./index.module.scss";
 import { useState } from "react";
 import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
-const ExpandablePanel = ({ header, children }) => {
+interface PropType {
+  header: JSX.Element;
+  children: JSX.Element;
+}
+
+const Panel = ({ header, children }: PropType) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleClick = () => {
@@ -22,4 +27,4 @@ const ExpandablePanel = ({ header, children }) => {
   );
 };
 
-export default ExpandablePanel;
+export default Panel;

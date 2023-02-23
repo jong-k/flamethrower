@@ -1,0 +1,14 @@
+.container {
+  margin: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  > h2 {
+    font-size: 2rem;
+  }
+
+}
+

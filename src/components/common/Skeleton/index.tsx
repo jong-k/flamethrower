@@ -1,4 +1,4 @@
-import styles from "../styles/Skeleton.module.scss";
+import styles from "./index.module.scss";
 
 interface PropsType {
   times: number;

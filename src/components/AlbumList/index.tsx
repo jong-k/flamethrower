@@ -1,10 +1,21 @@
-import { useFetchAlbumsQuery, useAddAlbumMutation } from "../store";
-import Skeleton from "./Skeleton";
-import Button from "./Button";
-import AlbumsListItem from "./AlbumsListItem";
-import styles from "../styles/AlbumsList.module.scss";
+import { useFetchAlbumsQuery, useAddAlbumMutation } from "../../store";
+import Skeleton from "../common/Skeleton";
+import Button from "../common/Button";
+import AlbumsListItem from "../AlbumListItem";
+import styles from "./index.module.scss";
+import { type UserType } from "../UserList";
 
-const AlbumsList = ({ user }) => {
+interface PropType {
+  user: UserType;
+}
+
+export interface AlbumType {
+  userId: number;
+  title: string;
+  id: number;
+}
+
+const AlbumsList = ({ user }: PropType) => {
   const { data, error, isLoading } = useFetchAlbumsQuery(user);
   const [addAlbum, results] = useAddAlbumMutation();
 
@@ -16,15 +27,15 @@ const AlbumsList = ({ user }) => {
   if (isLoading) {
     content = <Skeleton times={3} />;
   } else if (error != null) {
-    content = <div>Error loading albums.</div>;
+    content = <div>album을 로딩하는데 실패했습니다</div>;
   } else {
-    content = data.map((album) => {
+    content = data.map((album: AlbumType) => {
       return <AlbumsListItem key={album.id} album={album} />;
     });
   }
 
   return (
-    <div>
+    <>
       <div className={styles.container}>
         <h3 className={styles.description}>Albums for {user.name}</h3>
         <Button loading={results.isLoading} onClick={handleAddAlbum}>
@@ -32,7 +43,7 @@ const AlbumsList = ({ user }) => {
         </Button>
       </div>
       <div>{content}</div>
-    </div>
+    </>
   );
 };
 

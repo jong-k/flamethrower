@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { faker } from "@faker-js/faker";
+import { type PhotoType } from "../../components/PhotoList";
 
 // fetching 의도적으로 늦추는 함수 -> test용
 const pause = async (duration: number) => {
@@ -21,7 +22,7 @@ export const photosApi = createApi({
     return {
       fetchPhotos: builder.query({
         providesTags: (result, error, album) => {
-          const tags = result.map((photo) => {
+          const tags = result.map((photo: PhotoType) => {
             return { type: "Photo", id: photo.id };
           });
           tags.push({ type: "PhotoAlbum", id: album.id });
@@ -56,7 +57,7 @@ export const photosApi = createApi({
         invalidatesTags: (result, error, photo) => {
           return [{ type: "Photo", id: photo.id }];
         },
-        query: (photo) => {
+        query: (photo: PhotoType) => {
           return {
             method: "DELETE",
             url: `/photos/${photo.id}`,

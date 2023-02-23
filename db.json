@@ -1,125 +1,36 @@
 {
   "users": [
     {
-      "name": "Bruce Kuhic",
+      "name": "June Predovic",
       "id": 1
     },
     {
-      "name": "Edna Herzog",
+      "name": "Ray Grant",
       "id": 2
-    },
-    {
-      "name": "Elbert Lind",
-      "id": 3
     }
   ],
   "albums": [
     {
       "userId": 1,
-      "title": "Intelligent Steel Keyboard",
-      "id": 12
+      "title": "Elegant Steel Sausages",
+      "id": 1
     },
     {
       "userId": 1,
-      "title": "Practical Bronze Cheese",
-      "id": 13
-    },
-    {
-      "userId": 3,
-      "title": "Elegant Metal Pizza",
-      "id": 15
-    },
-    {
-      "userId": 2,
-      "title": "Ergonomic Frozen Chair",
-      "id": 19
-    },
-    {
-      "userId": 2,
-      "title": "Tasty Steel Tuna",
-      "id": 21
-    },
-    {
-      "userId": 2,
-      "title": "Electronic Metal Computer",
-      "id": 22
-    },
-    {
-      "userId": 1,
-      "title": "Intelligent Frozen Cheese",
-      "id": 23
-    },
-    {
-      "userId": 1,
-      "title": "Unbranded Metal Cheese",
-      "id": 24
-    },
-    {
-      "userId": 1,
-      "title": "Generic Plastic Tuna",
-      "id": 25
+      "title": "Electronic Granite Shirt",
+      "id": 2
     }
   ],
   "photos": [
     {
-      "albumId": 19,
-      "url": "https://loremflickr.com/150/150/abstract?lock=61723",
-      "id": 4
+      "albumId": 1,
+      "url": "https://loremflickr.com/150/150/abstract?lock=73801",
+      "id": 1
     },
     {
-      "albumId": 12,
-      "url": "https://loremflickr.com/150/150/abstract?lock=79908",
-      "id": 5
-    },
-    {
-      "albumId": 12,
-      "url": "https://loremflickr.com/150/150/abstract?lock=41844",
-      "id": 6
-    },
-    {
-      "albumId": 12,
-      "url": "https://loremflickr.com/150/150/abstract?lock=12302",
-      "id": 7
-    },
-    {
-      "albumId": 13,
-      "url": "https://loremflickr.com/150/150/abstract?lock=6374",
-      "id": 8
-    },
-    {
-      "albumId": 13,
-      "url": "https://loremflickr.com/150/150/abstract?lock=56828",
-      "id": 9
-    },
-    {
-      "albumId": 12,
-      "url": "https://loremflickr.com/150/150/abstract?lock=99454",
-      "id": 10
-    },
-    {
-      "albumId": 12,
-      "url": "https://loremflickr.com/150/150/abstract?lock=65921",
-      "id": 11
-    },
-    {
-      "albumId": 12,
-      "url": "https://loremflickr.com/150/150/abstract?lock=22341",
-      "id": 12
-    },
-    {
-      "albumId": 12,
-      "url": "https://loremflickr.com/150/150/abstract?lock=19351",
-      "id": 13
-    },
-    {
-      "albumId": 12,
-      "url": "https://loremflickr.com/150/150/abstract?lock=50323",
-      "id": 14
-    },
-    {
-      "albumId": 12,
-      "url": "https://loremflickr.com/150/150/abstract?lock=49122",
-      "id": 15
+      "albumId": 1,
+      "url": "https://loremflickr.com/150/150/abstract?lock=79961",
+      "id": 2
     }
   ]
 }
