@@ -3,10 +3,6 @@
     {
       "name": "June Predovic",
       "id": 1
-    },
-    {
-      "name": "Ray Grant",
-      "id": 2
     }
   ],
   "albums": [
@@ -19,6 +15,11 @@
       "userId": 1,
       "title": "Electronic Granite Shirt",
       "id": 2
+    },
+    {
+      "userId": 1,
+      "title": "Oriental Concrete Ball",
+      "id": 3
     }
   ],
   "photos": [
@@ -31,6 +32,11 @@
       "albumId": 1,
       "url": "https://loremflickr.com/150/150/abstract?lock=79961",
       "id": 2
+    },
+    {
+      "albumId": 1,
+      "url": "https://loremflickr.com/150/150/abstract?lock=52539",
+      "id": 3
     }
   ]
 }
