@@ -15,7 +15,7 @@ const Panel = ({ header, children }: PropType) => {
   };
 
   return (
-    <div className={styles.outer}>
+    <div className={styles.container}>
       <div className={styles.middle}>
         <div className={styles.inner}>{header}</div>
         <div style={{ cursor: "pointer" }} onClick={handleClick}>

@@ -1,2 +1,7 @@
 @use "reset";
-@use "variables";
+@use "variables" as v;
+@use "fonts";
+
+* {
+  font-family: v.$defaultFont;
+}

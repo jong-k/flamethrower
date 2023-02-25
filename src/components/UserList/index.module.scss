@@ -1,13 +1,19 @@
+@use "src/styles/variables" as v;
+
 .container {
-  margin: 2rem;
+  margin: 1rem;
+  width: 900px;
 }
 
 .header {
+  margin: 1.5rem;
   display: flex;
   justify-content: space-between;
 
   > h2 {
     font-size: 2rem;
+    font-family: v.$mainHeading;
+    font-weight: 700;
   }
 
 }

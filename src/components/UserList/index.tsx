@@ -5,6 +5,7 @@ import styles from "./index.module.scss";
 import Skeleton from "../common/Skeleton";
 import Button from "../common/Button";
 import UsersListItem from "../UserListItem";
+import { BUTTON_TYPE } from "../../enums";
 
 export interface UserType {
   name: string;
@@ -17,7 +18,7 @@ const UsersList = () => {
   const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser);
 
   const { data } = useAppSelector((state) => {
-    return state.users; // { data, [], isLoading: false, error: null }
+    return state.users;
   });
 
   useEffect(() => {
@@ -46,7 +47,11 @@ const UsersList = () => {
         {creatingUserError ? (
           <p>Error creating user...</p>
         ) : (
-          <Button loading={isCreatingUser} onClick={handleUserAdd}>
+          <Button
+            loading={isCreatingUser}
+            onClick={handleUserAdd}
+            type={BUTTON_TYPE.ADD}
+          >
             + Add User
           </Button>
         )}

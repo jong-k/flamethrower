@@ -3,13 +3,14 @@ import styles from "./index.module.scss";
 
 interface PropType {
   children: string | JSX.Element;
-  loading: boolean | undefined;
+  loading: any;
   onClick: () => void;
+  type: string;
 }
 
-const Button = ({ children, loading, onClick }: PropType) => {
+const Button = ({ children, loading, onClick, type }: PropType) => {
   return (
-    <button onClick={onClick} disabled={loading} className={styles.button}>
+    <button onClick={onClick} disabled={loading} className={styles[type]}>
       {loading ? <GoSync className={styles.spinner} /> : children}
     </button>
   );

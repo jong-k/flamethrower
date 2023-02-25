@@ -1,0 +1,13 @@
+@use "src/styles/variables" as v;
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: v.$mainHeading;
+}

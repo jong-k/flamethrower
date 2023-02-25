@@ -3,7 +3,9 @@ import { removeUser, useThunk } from "../../store";
 import Button from "../common/Button";
 import Panel from "../common/Panel";
 import AlbumsList from "../AlbumList";
+import Header from "../common/Header";
 import { type UserType } from "../UserList";
+import { BUTTON_TYPE } from "../../enums";
 
 interface PropsType {
   user: UserType;
@@ -17,13 +19,12 @@ const UsersListItem = ({ user }: PropsType) => {
   };
 
   const header = (
-    <>
-      <Button loading={isLoading} onClick={handleClick}>
-        <GoTrashcan />
-      </Button>
-      {error && <div>user를 삭제하는데 실패했습니다</div>}
-      {user.name}
-    </>
+    <Header
+      heading={user.name}
+      error={error}
+      loading={isLoading}
+      onClick={handleClick}
+    />
   );
 
   return (

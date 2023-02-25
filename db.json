@@ -1,42 +1,20 @@
 {
   "users": [
     {
-      "name": "June Predovic",
-      "id": 1
+      "name": "Taylor Schumm",
+      "id": 7
+    },
+    {
+      "name": "Pat Boyer",
+      "id": 8
     }
   ],
   "albums": [
     {
-      "userId": 1,
-      "title": "Elegant Steel Sausages",
+      "userId": 7,
+      "title": "Bespoke Bronze Ball",
       "id": 1
-    },
-    {
-      "userId": 1,
-      "title": "Electronic Granite Shirt",
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "title": "Oriental Concrete Ball",
-      "id": 3
     }
   ],
-  "photos": [
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/abstract?lock=73801",
-      "id": 1
-    },
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/abstract?lock=79961",
-      "id": 2
-    },
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/abstract?lock=52539",
-      "id": 3
-    }
-  ]
+  "photos": []
 }
