@@ -18,8 +18,15 @@ const Panel = ({ header, children }: PropType) => {
     <div className={styles.container}>
       <div className={styles.middle}>
         <div className={styles.inner}>{header}</div>
-        <div style={{ cursor: "pointer" }} onClick={handleClick}>
-          {expanded ? <GoChevronDown /> : <GoChevronLeft />}
+        <div
+          style={{ cursor: "pointer", marginRight: "0.5rem" }}
+          onClick={handleClick}
+        >
+          {expanded ? (
+            <GoChevronDown style={{ scale: "175%" }} />
+          ) : (
+            <GoChevronLeft style={{ scale: "175%" }} />
+          )}
         </div>
       </div>
       {expanded && <div className={styles.temp}>{children}</div>}

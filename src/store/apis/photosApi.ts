@@ -1,13 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { faker } from "@faker-js/faker";
 import { type PhotoType } from "../../components/PhotoList";
-
-// fetching 의도적으로 늦추는 함수 -> test용
-const pause = async (duration: number) => {
-  return await new Promise((resolve) => {
-    setTimeout(resolve, duration);
-  });
-};
+import { pause } from "../../utils/pause";
 
 export const photosApi = createApi({
   reducerPath: "photos",

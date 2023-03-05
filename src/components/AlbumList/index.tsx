@@ -4,6 +4,7 @@ import Button from "../common/Button";
 import AlbumsListItem from "../AlbumListItem";
 import styles from "./index.module.scss";
 import { type UserType } from "../UserList";
+import { BUTTON_TYPE } from "../../enums";
 
 interface PropType {
   user: UserType;
@@ -37,8 +38,12 @@ const AlbumsList = ({ user }: PropType) => {
   return (
     <>
       <div className={styles.container}>
-        <h3 className={styles.description}>Albums for {user.name}</h3>
-        <Button loading={results.isLoading} onClick={handleAddAlbum}>
+        <h2 className={styles.description}>Albums for {user.name}</h2>
+        <Button
+          type={BUTTON_TYPE.ADD}
+          loading={results.isLoading}
+          onClick={handleAddAlbum}
+        >
           + Add Album
         </Button>
       </div>

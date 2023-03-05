@@ -1,8 +1,17 @@
+@use "src/styles/variables" as v;
+
 .container {
+  padding: 0.5rem 0.25rem;
   margin: 0.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  > h2 {
+    font-size: 1.25rem;
+    font-family: v.$mainHeading;
+    font-weight: 700;
+  }
 }
 
 .description {

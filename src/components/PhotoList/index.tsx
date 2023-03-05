@@ -4,6 +4,7 @@ import Button from "../common/Button";
 import Skeleton from "../common/Skeleton";
 import PhotoListItem from "../PhotoListItem";
 import { type AlbumType } from "../AlbumList";
+import { BUTTON_TYPE } from "../../enums";
 
 export interface PhotoType {
   albumId: number;
@@ -38,7 +39,11 @@ const PhotosList = ({ album }: PropType) => {
     <>
       <div className={styles.inner}>
         <h3 className={styles.header}>Photos In {album.title}</h3>
-        <Button loading={addPhotoResults.isLoading} onClick={handleAddPhoto}>
+        <Button
+          type={BUTTON_TYPE.ADD}
+          loading={addPhotoResults.isLoading}
+          onClick={handleAddPhoto}
+        >
           + Add Photo
         </Button>
       </div>

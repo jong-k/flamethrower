@@ -4,6 +4,7 @@ import Panel from "../common/Panel";
 import { useRemoveAlbumMutation } from "../../store";
 import PhotosList from "../PhotoList";
 import { type AlbumType } from "../AlbumList";
+import { BUTTON_TYPE } from "../../enums";
 
 interface PropType {
   album: AlbumType;
@@ -18,10 +19,14 @@ const AlbumsListItem = ({ album }: PropType) => {
 
   const header = (
     <>
-      <Button loading={results.isLoading} onClick={handleRemoveAlbum}>
+      {album.title}
+      <Button
+        type={BUTTON_TYPE.DELETE}
+        loading={results.isLoading}
+        onClick={handleRemoveAlbum}
+      >
         <GoTrashcan />
       </Button>
-      {album.title}
     </>
   );
   return (
