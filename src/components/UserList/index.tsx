@@ -43,7 +43,9 @@ const UsersList = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h2>Gallery Drive</h2>
+        <a href="#">
+          <h2>Gallery Drive</h2>
+        </a>
         {creatingUserError ? (
           <p>Error creating user...</p>
         ) : (

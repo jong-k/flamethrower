@@ -1,0 +1,10 @@
+@use "variables" as v;
+
+* {
+  font-family: v.$defaultFont;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
