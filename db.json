@@ -2,7 +2,11 @@
   "users": [
     {
       "name": "edited!",
-      "id": 1
+      "id": 3
+    },
+    {
+      "name": "Irving Streich",
+      "id": 4
     }
   ],
   "albums": [],

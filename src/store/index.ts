@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query/react";
-import usersReducer from "./slices/userSlice";
+import usersReducer, { changeUserName } from "./slices/userSlice";
 import { albumsApi } from "./apis/albumsApi";
 import { photosApi } from "./apis/photosApi";
 
@@ -19,6 +19,7 @@ export const store = configureStore({
 
 setupListeners(store.dispatch);
 
+export { changeUserName };
 export * from "./thunks/fetchUsers";
 export * from "./thunks/addUser";
 export * from "./thunks/useThunk";

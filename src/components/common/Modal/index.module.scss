@@ -1,0 +1,39 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5%;
+  width: 35%;
+  display: flex;
+  z-index: 10;
+  background: #eee;
+}
+
+.contents {
+
+  > input {
+
+  }
+}
+
+.btnBox {
+  .confirm {
+
+
+  }
+
+  .cancel {
+
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  z-index: 5;
+}

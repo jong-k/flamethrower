@@ -6,11 +6,14 @@ import { editUserName } from "../thunks/editUserName";
 import { type UserType } from "../../components/UserList";
 
 interface InitialStateType {
+  newUserName: string;
   data: any[];
   isLoading: boolean;
   error: null | SerializedError;
 }
+
 const initialState: InitialStateType = {
+  newUserName: "",
   data: [],
   isLoading: false,
   error: null,
@@ -19,7 +22,11 @@ const initialState: InitialStateType = {
 const userSlice = createSlice({
   name: "users",
   initialState,
-  reducers: {},
+  reducers: {
+    changeUserName(state, action) {
+      state.newUserName = action.payload;
+    },
+  },
   extraReducers(builder) {
     // reducer 함수 내부에서 return 사용하지 않아도 되는 이유
     // RTK 자체적으로 immer 라이브러리를 쓰고 있어서
@@ -83,3 +90,4 @@ const userSlice = createSlice({
 
 // const 와 동시에 export 하지 않고 이렇게도 해보기
 export default userSlice.reducer; // store 에서 usersReducer 로 import
+export const { changeUserName } = userSlice.actions;
