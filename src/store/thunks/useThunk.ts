@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import { useAppDispatch } from "../hooks";
 import { type AsyncThunk } from "@reduxjs/toolkit";
-import { type UserType } from "../../components/UserListItem";
+import { type UserType } from "../../components/UserList";
 
 interface ArgType {
   typePrefix: string;

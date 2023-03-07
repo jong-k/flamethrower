@@ -1,21 +1,39 @@
-import { GoTrashcan } from "react-icons/go";
+import { GoTrashcan, GoPencil } from "react-icons/go";
 import styles from "./index.module.scss";
 import Button from "../Button";
 import { BUTTON_TYPE } from "../../../enums";
 
 interface PropType {
   heading: string;
-  error: any;
-  loading: any;
-  onClick: () => void;
+  removeError: any;
+  removeLoading: any;
+  onRemove: () => void;
+  editError: any;
+  editLoading: any;
+  onEdit: () => void;
 }
 
-const Header = ({ heading, error, loading, onClick }: PropType) => {
+const Header = ({
+  heading,
+  removeError,
+  removeLoading,
+  onRemove,
+  editError,
+  editLoading,
+  onEdit,
+}: PropType) => {
   return (
     <div className={styles.header}>
       <h2 className={styles.heading}>{heading}</h2>
-      {error && <h2>삭제 실패</h2>}
-      <Button loading={loading} onClick={onClick} type={BUTTON_TYPE.DELETE}>
+      {(removeError || editError) && <h2>삭제 실패</h2>}
+      <Button loading={editLoading} onClick={onEdit} type={BUTTON_TYPE.EDIT}>
+        <GoPencil />
+      </Button>
+      <Button
+        loading={removeLoading}
+        onClick={onRemove}
+        type={BUTTON_TYPE.DELETE}
+      >
         <GoTrashcan />
       </Button>
     </div>

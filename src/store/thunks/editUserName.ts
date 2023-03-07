@@ -3,13 +3,18 @@ import { type UserType } from "../../components/UserList";
 
 const USERS_URL = "http://localhost:3005/users";
 
-export const removeUser = createAsyncThunk(
-  "users/remove",
+export const editUserName = createAsyncThunk(
+  "users/edit",
   async (user: UserType) => {
     const response = await fetch(USERS_URL + `/${user.id}`, {
-      method: "DELETE",
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: "edited!",
+      }),
     });
-    // delete 요청 시에는 별도의 응답이 없으므로 user만 리턴해주면 됨
-    return user;
+    return await response.json();
   },
 );

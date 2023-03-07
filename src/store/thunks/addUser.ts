@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { faker } from "@faker-js/faker";
-import { type UserType } from "../../components/UserListItem";
+import { type UserType } from "../../components/UserList";
 
 const USERS_URL = "http://localhost:3005/users";
 

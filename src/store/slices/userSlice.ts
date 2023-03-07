@@ -2,6 +2,8 @@ import { createSlice, type SerializedError } from "@reduxjs/toolkit";
 import { fetchUsers } from "../thunks/fetchUsers";
 import { addUser } from "../thunks/addUser";
 import { removeUser } from "../thunks/removeUser";
+import { editUserName } from "../thunks/editUserName";
+import { type UserType } from "../../components/UserList";
 
 interface InitialStateType {
   data: any[];
@@ -59,6 +61,20 @@ const userSlice = createSlice({
       });
     });
     builder.addCase(removeUser.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.error;
+    });
+    // editUserName
+    builder.addCase(editUserName.pending, (state, action) => {
+      state.isLoading = true;
+    });
+    builder.addCase(editUserName.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.data = state.data.map((user: UserType) => {
+        return user.id === action.payload.id ? action.payload : user;
+      });
+    });
+    builder.addCase(editUserName.rejected, (state, action) => {
       state.isLoading = false;
       state.error = action.error;
     });

@@ -1,29 +1,34 @@
-import { GoTrashcan } from "react-icons/go";
-import { removeUser, useThunk } from "../../store";
-import Button from "../common/Button";
+import { removeUser, editUserName, useThunk } from "../../store";
 import Panel from "../common/Panel";
 import AlbumsList from "../AlbumList";
 import Header from "../common/Header";
 import { type UserType } from "../UserList";
-import { BUTTON_TYPE } from "../../enums";
 
 interface PropsType {
   user: UserType;
 }
 
 const UsersListItem = ({ user }: PropsType) => {
-  const [doRemoveUser, isLoading, error] = useThunk(removeUser);
+  const [doRemoveUser, isRemoveLoading, removeError] = useThunk(removeUser);
+  const [doEditUserName, isEditLoading, editError] = useThunk(editUserName);
 
-  const handleClick = () => {
+  const handleRemove = () => {
     doRemoveUser(user);
+  };
+
+  const handleEdit = () => {
+    doEditUserName(user);
   };
 
   const header = (
     <Header
       heading={user.name}
-      error={error}
-      loading={isLoading}
-      onClick={handleClick}
+      removeError={removeError}
+      removeLoading={isRemoveLoading}
+      onRemove={handleRemove}
+      editError={editError}
+      editLoading={isEditLoading}
+      onEdit={handleEdit}
     />
   );
 

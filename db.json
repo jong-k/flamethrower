@@ -1,55 +1,10 @@
 {
   "users": [
     {
-      "name": "Taylor Schumm",
-      "id": 7
-    },
-    {
-      "name": "Pat Boyer",
-      "id": 8
-    },
-    {
-      "name": "Jake Upton",
-      "id": 9
+      "name": "edited!",
+      "id": 1
     }
   ],
-  "albums": [
-    {
-      "userId": 7,
-      "title": "Bespoke Bronze Ball",
-      "id": 1
-    },
-    {
-      "userId": 7,
-      "title": "Licensed Bronze Shoes",
-      "id": 2
-    },
-    {
-      "userId": 8,
-      "title": "Elegant Metal Chicken",
-      "id": 3
-    },
-    {
-      "userId": 7,
-      "title": "Electronic Wooden Shirt",
-      "id": 4
-    }
-  ],
-  "photos": [
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/abstract?lock=75966",
-      "id": 1
-    },
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/abstract?lock=14610",
-      "id": 2
-    },
-    {
-      "albumId": 2,
-      "url": "https://loremflickr.com/150/150/abstract?lock=12764",
-      "id": 3
-    }
-  ]
+  "albums": [],
+  "photos": []
 }
