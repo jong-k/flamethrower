@@ -8,29 +8,30 @@ button {
   margin-right: 0.5rem;
   cursor: pointer;
 
+  &:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(0, 0, 0, 0.25);
+  }
 }
 
 .addButton {
   width: 6.5rem;
   height: 2rem;
   background: #7eff00;
-
-  &:hover {
-    transform: scale(1.1, 1.1);
-    box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(0, 0, 0, 0.25);
-  }
 }
 
 .deleteButton {
-  margin: 0.5rem;
+  margin: 0.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #888;
+}
+
+.editButton {
+  margin: 0.2rem;
   width: 2.5rem;
   height: 2.5rem;
   background: #ffb2cd;
-
-  &:hover {
-    transform: scale(1.1, 1.1);
-    box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(0, 0, 0, 0.25);
-  }
 }
 
 .spinner {

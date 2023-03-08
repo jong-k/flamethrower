@@ -38,16 +38,23 @@ const Header = ({
     <div className={styles.header}>
       <h2 className={styles.heading}>{heading}</h2>
       {(removeError || editError) && <h2>삭제 실패</h2>}
-      <Button loading={editLoading} onClick={openModal} type={BUTTON_TYPE.EDIT}>
-        <GoPencil />
-      </Button>
-      <Button
-        loading={removeLoading}
-        onClick={onRemove}
-        type={BUTTON_TYPE.DELETE}
-      >
-        <GoTrashcan />
-      </Button>
+      <div className={styles.btnBox}>
+        <Button
+          loading={editLoading}
+          onClick={openModal}
+          type={BUTTON_TYPE.EDIT}
+        >
+          <GoPencil />
+        </Button>
+        <Button
+          loading={removeLoading}
+          onClick={onRemove}
+          type={BUTTON_TYPE.DELETE}
+        >
+          <GoTrashcan />
+        </Button>
+      </div>
+
       {isModalOn && (
         <Modal prevName={heading} onEdit={onEdit} closeModal={closeModal} />
       )}

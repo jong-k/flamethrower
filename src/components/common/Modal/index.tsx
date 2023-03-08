@@ -10,7 +10,7 @@ interface PropType {
   closeModal: any;
 }
 
-const Modal = ({ prevName, onEdit, openModal, closeModal }: PropType) => {
+const Modal = ({ prevName, onEdit, closeModal }: PropType) => {
   const dispatch = useAppDispatch();
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch(changeUserName(e.target.value));
@@ -23,20 +23,22 @@ const Modal = ({ prevName, onEdit, openModal, closeModal }: PropType) => {
   return (
     <>
       <div className={styles.modal}>
-        <h2>Change name?</h2>
-        <div className={styles.contents}>
-          <input
-            type="text"
-            placeholder={prevName}
-            onChange={handleNameChange}
-          />
-          <div className={styles.btnBox}>
-            <button className={styles.confirm} onClick={handleConfirm}>
-              Confirm
-            </button>
-            <button onClick={closeModal} className={styles.cancel}>
-              Cancel
-            </button>
+        <div className={styles.container}>
+          <h2>Change name?</h2>
+          <div className={styles.contents}>
+            <input
+              type="text"
+              placeholder={prevName}
+              onChange={handleNameChange}
+            />
+            <div className={styles.btnBox}>
+              <button className={styles.confirm} onClick={handleConfirm}>
+                Confirm
+              </button>
+              <button onClick={closeModal} className={styles.cancel}>
+                Cancel
+              </button>
+            </div>
           </div>
         </div>
       </div>
