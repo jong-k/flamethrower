@@ -9,6 +9,12 @@
       "id": 4
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "userId": 3,
+      "title": "Refined Steel Bacon",
+      "id": 1
+    }
+  ],
   "photos": []
 }
