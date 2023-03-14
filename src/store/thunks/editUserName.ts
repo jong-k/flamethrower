@@ -1,4 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import { faker } from "@faker-js/faker";
 import { type UserType } from "../../components/UserList";
 
 const USERS_URL = "http://localhost:3005/users";
@@ -12,7 +13,7 @@ export const editUserName = createAsyncThunk(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name: "edited!",
+        name: faker.name.fullName(),
       }),
     });
     return await response.json();

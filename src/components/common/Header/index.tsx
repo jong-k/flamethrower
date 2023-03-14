@@ -1,8 +1,7 @@
-import { useState } from "react";
-import { GoTrashcan, GoPencil } from "react-icons/go";
+import { useEffect } from "react";
+import { GoTrashcan, GoSync } from "react-icons/go";
 import styles from "./index.module.scss";
 import Button from "../Button";
-import Modal from "../Modal";
 import { BUTTON_TYPE } from "../../../enums";
 
 interface PropType {
@@ -24,27 +23,17 @@ const Header = ({
   editLoading,
   onEdit,
 }: PropType) => {
-  const [isModalOn, setIsModalOn] = useState<boolean>(false);
-
-  const openModal = () => {
-    setIsModalOn(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOn(false);
-  };
+  useEffect(() => {
+    console.log(editError);
+  }, [editError]);
 
   return (
     <div className={styles.header}>
       <h2 className={styles.heading}>{heading}</h2>
-      {(removeError || editError) && <h2>삭제 실패</h2>}
+      {(removeError || editError) && <h2>요청을 수행하는데 실패했습니다</h2>}
       <div className={styles.btnBox}>
-        <Button
-          loading={editLoading}
-          onClick={openModal}
-          type={BUTTON_TYPE.EDIT}
-        >
-          <GoPencil />
+        <Button loading={editLoading} onClick={onEdit} type={BUTTON_TYPE.EDIT}>
+          <GoSync />
         </Button>
         <Button
           loading={removeLoading}
@@ -54,10 +43,6 @@ const Header = ({
           <GoTrashcan />
         </Button>
       </div>
-
-      {isModalOn && (
-        <Modal prevName={heading} onEdit={onEdit} closeModal={closeModal} />
-      )}
     </div>
   );
 };
