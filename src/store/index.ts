@@ -32,6 +32,7 @@ export {
   useFetchAlbumsQuery,
   useAddAlbumMutation,
   useRemoveAlbumMutation,
+  useEditAlbumNameMutation,
 } from "./apis/albumsApi";
 
 export {

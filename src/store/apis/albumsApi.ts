@@ -59,6 +59,20 @@ export const albumsApi = createApi({
           };
         },
       }),
+      editAlbumName: builder.mutation({
+        invalidatesTags: (result, error, album) => {
+          return [{ type: "Album", id: album.id }];
+        },
+        query: (album: AlbumType) => {
+          return {
+            url: `/albums/${album.id}`,
+            method: "PATCH",
+            body: {
+              title: faker.commerce.productName(),
+            },
+          };
+        },
+      }),
     };
   },
 });
@@ -67,4 +81,5 @@ export const {
   useFetchAlbumsQuery,
   useAddAlbumMutation,
   useRemoveAlbumMutation,
+  useEditAlbumNameMutation,
 } = albumsApi;

@@ -1,7 +1,7 @@
-import { GoPencil, GoTrashcan } from "react-icons/go";
+import { GoPencil, GoTrashcan, GoSync } from "react-icons/go";
 import Button from "../common/Button";
 import Panel from "../common/Panel";
-import { useRemoveAlbumMutation } from "../../store";
+import { useRemoveAlbumMutation, useEditAlbumNameMutation } from "../../store";
 import PhotosList from "../PhotoList";
 import { type AlbumType } from "../AlbumList";
 import { BUTTON_TYPE } from "../../enums";
@@ -12,10 +12,15 @@ interface PropType {
 }
 
 const AlbumsListItem = ({ album }: PropType) => {
-  const [removeAlbum, results] = useRemoveAlbumMutation();
+  const [removeAlbum, removeResults] = useRemoveAlbumMutation();
+  const [editAlbumName, editResults] = useEditAlbumNameMutation();
 
   const handleRemoveAlbum = () => {
     removeAlbum(album);
+  };
+
+  const handleEditAlbumName = () => {
+    editAlbumName(album);
   };
 
   const header = (
@@ -24,14 +29,14 @@ const AlbumsListItem = ({ album }: PropType) => {
       <div className={styles.btnBox}>
         <Button
           type={BUTTON_TYPE.EDIT}
-          loading={results.isLoading}
-          onClick={handleRemoveAlbum}
+          loading={editResults.isLoading}
+          onClick={handleEditAlbumName}
         >
-          <GoPencil />
+          <GoSync />
         </Button>
         <Button
           type={BUTTON_TYPE.DELETE}
-          loading={results.isLoading}
+          loading={removeResults.isLoading}
           onClick={handleRemoveAlbum}
         >
           <GoTrashcan />

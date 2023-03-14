@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "name": "Kent Murazik",
+      "name": "Lionel Barton",
       "id": 1
     },
     {
@@ -15,13 +15,27 @@
     {
       "name": "Chad Beier",
       "id": 4
+    },
+    {
+      "name": "Charlene Hagenes",
+      "id": 5
     }
   ],
   "albums": [
     {
       "userId": 1,
-      "title": "Licensed Cotton Table",
+      "title": "Refined Cotton Fish",
       "id": 1
+    },
+    {
+      "userId": 1,
+      "title": "Rustic Fresh Shirt",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "title": "Generic Plastic Mouse",
+      "id": 3
     }
   ],
   "photos": [
