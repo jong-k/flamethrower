@@ -1,61 +1,24 @@
 {
   "users": [
     {
-      "name": "유제성",
+      "name": "피예섭",
       "id": 1
     },
     {
-      "name": "황겸재",
+      "name": "당다준",
       "id": 2
+    },
+    {
+      "name": "고선후",
+      "id": 3
     }
   ],
   "albums": [
     {
       "userId": 1,
-      "title": "주식회사 보람",
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "title": "한국 우주",
+      "title": "한국 영석",
       "id": 2
-    },
-    {
-      "userId": 1,
-      "title": "형건 그룹",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "title": "주식회사 동화",
-      "id": 4
     }
   ],
-  "photos": [
-    {
-      "albumId": 10,
-      "url": "https://loremflickr.com/150/150/abstract?lock=46777",
-      "id": 1
-    },
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/technics?lock=1510",
-      "id": 2
-    },
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/technics?lock=31632",
-      "id": 3
-    },
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/technics?lock=74131",
-      "id": 4
-    },
-    {
-      "albumId": 3,
-      "url": "https://loremflickr.com/150/150/technics?lock=46803",
-      "id": 5
-    }
-  ]
+  "photos": []
 }
