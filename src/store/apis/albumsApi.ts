@@ -1,12 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { faker } from "@faker-js/faker";
+import { faker } from "@faker-js/faker/locale/ko";
 import { pause } from "../../utils/pause";
 import { type AlbumType } from "../../components/AlbumList";
 
 export const albumsApi = createApi({
   reducerPath: "albums",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3005/",
+    baseUrl: import.meta.env.VITE_JSON_SERVER_URL,
     // TODO : loading skeleton 확인을 위한 의도적 지연
     fetchFn: async (...args) => {
       await pause(1000);
@@ -43,7 +43,7 @@ export const albumsApi = createApi({
             method: "POST",
             body: {
               userId: user.id,
-              title: faker.commerce.productName(),
+              title: faker.company.name(),
             },
           };
         },
@@ -68,7 +68,7 @@ export const albumsApi = createApi({
             url: `/albums/${album.id}`,
             method: "PATCH",
             body: {
-              title: faker.commerce.productName(),
+              title: faker.company.name(),
             },
           };
         },

@@ -6,7 +6,7 @@ import { pause } from "../../utils/pause";
 export const photosApi = createApi({
   reducerPath: "photos",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3005/",
+    baseUrl: import.meta.env.VITE_JSON_SERVER_URL,
     fetchFn: async (...args) => {
       await pause(1000);
       return await fetch(...args);
@@ -42,7 +42,7 @@ export const photosApi = createApi({
             method: "POST",
             body: {
               albumId: album.id,
-              url: faker.image.abstract(150, 150, true),
+              url: faker.image.technics(150, 150, true),
             },
           };
         },

@@ -38,13 +38,13 @@ const PhotosList = ({ album }: PropType) => {
   return (
     <>
       <div className={styles.inner}>
-        <h3 className={styles.header}>Photos In {album.title}</h3>
+        <h3 className={styles.header}>{album.title} 관련 이미지</h3>
         <Button
           type={BUTTON_TYPE.ADD}
           loading={addPhotoResults.isLoading}
           onClick={handleAddPhoto}
         >
-          + Add Photo
+          사진 추가
         </Button>
       </div>
       <div className={styles.content}>{content}</div>

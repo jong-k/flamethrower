@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { GoTrashcan, GoSync } from "react-icons/go";
 import styles from "./index.module.scss";
 import Button from "../Button";
@@ -23,10 +22,6 @@ const Header = ({
   editLoading,
   onEdit,
 }: PropType) => {
-  useEffect(() => {
-    console.log(editError);
-  }, [editError]);
-
   return (
     <div className={styles.header}>
       <h2 className={styles.heading}>{heading}</h2>

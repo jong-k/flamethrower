@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { type UserType } from "../../components/UserList";
 import { pause } from "../../utils/pause";
 
-const USERS_URL = "http://localhost:3005/users";
+const USERS_URL = import.meta.env.VITE_JSON_SERVER_URL + "users";
 
 export const fetchUsers = createAsyncThunk("users/fetch", async () => {
   const response = await fetch(USERS_URL);

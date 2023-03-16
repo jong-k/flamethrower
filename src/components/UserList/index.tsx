@@ -54,7 +54,7 @@ const UsersList = () => {
             onClick={handleUserAdd}
             type={BUTTON_TYPE.ADD}
           >
-            + Add User
+            유저 생성
           </Button>
         )}
       </div>

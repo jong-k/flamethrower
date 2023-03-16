@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { type UserType } from "../../components/UserList";
 
-const USERS_URL = "http://localhost:3005/users";
+const USERS_URL = import.meta.env.VITE_JSON_SERVER_URL + "users";
 
 export const removeUser = createAsyncThunk(
   "users/remove",

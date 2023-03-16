@@ -1,48 +1,37 @@
 {
   "users": [
     {
-      "name": "Lionel Barton",
+      "name": "유제성",
       "id": 1
-    },
-    {
-      "name": "Jordan MacGyver",
-      "id": 2
-    },
-    {
-      "name": "Corey Mayer III",
-      "id": 3
-    },
-    {
-      "name": "Chad Beier",
-      "id": 4
-    },
-    {
-      "name": "Charlene Hagenes",
-      "id": 5
     }
   ],
   "albums": [
     {
       "userId": 1,
-      "title": "Refined Cotton Fish",
+      "title": "주식회사 보람",
       "id": 1
-    },
-    {
-      "userId": 1,
-      "title": "Rustic Fresh Shirt",
-      "id": 2
-    },
-    {
-      "userId": 2,
-      "title": "Generic Plastic Mouse",
-      "id": 3
     }
   ],
   "photos": [
     {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/abstract?lock=30638",
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=46777",
       "id": 1
+    },
+    {
+      "albumId": 1,
+      "url": "https://loremflickr.com/150/150/technics?lock=1510",
+      "id": 2
+    },
+    {
+      "albumId": 1,
+      "url": "https://loremflickr.com/150/150/technics?lock=31632",
+      "id": 3
+    },
+    {
+      "albumId": 1,
+      "url": "https://loremflickr.com/150/150/technics?lock=74131",
+      "id": 4
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { GoPencil, GoTrashcan, GoSync } from "react-icons/go";
+import { GoTrashcan, GoSync } from "react-icons/go";
 import Button from "../common/Button";
 import Panel from "../common/Panel";
 import { useRemoveAlbumMutation, useEditAlbumNameMutation } from "../../store";
