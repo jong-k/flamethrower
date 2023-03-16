@@ -38,13 +38,15 @@ const AlbumsList = ({ user }: PropType) => {
   return (
     <>
       <div className={styles.container}>
-        <h2 className={styles.description}>{user.name} 님의 고객사</h2>
+        <h2 className={styles.description}>
+          {user.name} 님의 고객사 앨범 목록
+        </h2>
         <Button
           type={BUTTON_TYPE.ADD}
           loading={results.isLoading}
           onClick={handleAddAlbum}
         >
-          고객사 추가
+          앨범 추가
         </Button>
       </div>
       <div>{content}</div>
