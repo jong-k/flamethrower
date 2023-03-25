@@ -48,3 +48,8 @@
 - 이미 fetching한 data는 caching합니다 (RTKQ의 tags 기능 활용)
 
 ![캐싱](gifs/caching.gif)
+
+## 5. 실행 방법
+- 이 레포지토리를 클론한 뒤 종속성을 설치합니다
+- `npm run dev` 명령어로 개발 서버를 시작합니다
+- `npm run server` 명령어로 json-server를 시작합니다
